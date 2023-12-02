@@ -1,0 +1,675 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600&display=swap');
+
+*{
+    font-family: 'Mulish', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s ease-out;
+}
+
+:root{
+    --bg: #e6e6e6;
+    --main-color: #32ABBC;
+    /*--main-color: linear-gradient(to right, #32ABBC, #00c000);*/
+    --white: #fff;
+    --grey: #777;
+    --black: #111;
+    --transparent: rgba(0, 0, 0, 0.5);
+    --border: 3px solid rgba(0, 0, 0, 0.2);
+    --border-radius: .6rem;
+    --section-padding: 2rem 8%;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--bg);
+    border-left: var(--border);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-left: var(--border);
+}
+
+.login{
+    background: var(--bg);
+    background-image: url(images/bg.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.login-forma .auth{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 15%;
+    padding: 3rem 0;
+    width: 28rem;
+    text-align: center;
+    background: var(--transparent);
+    border-radius: 4rem 0 4rem 0;
+}
+
+.login-forma .auth form h1{
+    font-size: 2.2rem;
+    color: var(--main-color);
+}
+
+.login-forma .auth form p{
+    color: var(--bg);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.login-forma .auth form .box{
+    width: 75%;
+    margin: .5rem;
+    padding: .5rem;
+    font-size: 1.3rem;
+    background: var(--bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+.login-forma .auth form .box::placeholder{
+    color: #666;
+}
+
+.login-forma .auth form .box:focus, .login-forma .auth form .box:hover{
+    background: #888;
+    color: #fff;
+}
+
+.login-forma .auth form .btn{
+    background: var(--main-color);
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: .5rem;
+    padding: .5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.login-forma .auth form .btn:hover{
+    background: #777;
+    cursor: pointer;
+}
+
+.login-forma .auth form span{
+    display: block;
+    color: rgb(197, 0, 0);
+    font-size: 1.4rem;
+    padding-top: 1rem;
+}
+
+body{
+    background: var(--bg);
+}
+
+.btn{
+    background: var(--bg);
+    color: var(--main-color);
+    padding: .5rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: var(--black);
+    color: var(--bg);
+}
+
+hr{
+    width: 100%;
+    background: linear-gradient(to right, rgba(1, 1, 1, 0.05), rgba(1, 1, 1, 0.4), var(--grey), var(--grey), rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.05));
+    height: 2px;
+    margin: 1rem 0;
+}
+
+.simbols{
+    line-height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.simbols.zals{
+    color: #595;
+}
+
+.simbols.sarkans{
+    color: #933;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--main-color);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--section-padding);
+}
+
+header h1 a{
+    color: var(--bg);
+    font-size: 2rem;
+}
+
+header h1 a:hover{
+    color: var(--black);
+    cursor: pointer;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li{
+    position: relative;
+    display: inline-block;
+}
+
+header nav ul li a{
+    color: var(--black);
+    padding: .5rem 1rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+header nav ul li a:hover{
+    color: var(--bg);
+}
+
+header nav ul li:hover .dropdown{
+    display: block;
+}
+
+header nav ul li .dropdown{
+    position: absolute;
+    display: none;
+    width: fit-content;
+    background: var(--bg);
+    border: 2px solid var(--main-color);
+    border-radius: var(--border-radius);
+    padding: .5rem 1rem;
+}
+
+header nav ul li .dropdown a, header nav ul li .dropdown button{
+    display: flex;
+    width: 100%;
+    padding: .2rem 1rem;
+    background: none;
+    color: var(--black);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+header nav ul li .dropdown a:hover,  header nav ul li .dropdown button:hover{
+    text-decoration: underline 4px var(--main-color);
+}
+
+header nav ul li .active{
+    color: var(--bg);
+}
+
+header nav ul li .dropdown button.active2{
+    color: var(--main-color);
+}
+
+header nav ul li .dropdown button.active2:hover{
+    color: var(--main-color);
+}
+
+header .lietotajs{
+    font-size: 1.3rem;
+    color: var(--black);
+    margin-right: 1rem;
+}
+
+header .lietotajs span{
+    color: var(--bg);
+    font-weight: 600;
+}
+
+header .btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .btns .sadala{
+    margin: 0 .1rem;
+}
+
+header .btns #krasas-contents{
+    position: relative;
+}
+
+header .btns .btn{
+    line-height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+header .btns #krasas-btn{
+    position: relative;
+}
+
+header .btns #krasas-dropdown{
+    position: absolute;
+    right: 2.4rem;
+    top: 2.4rem;
+    display: none;
+    background: var(--main-color);
+    color: var(--black);
+    border: var(--border);
+    padding: .5rem 1.5rem;
+    border-radius: var(--border-radius);
+    border-top-right-radius: 0;
+    font-size: .8rem;
+    text-align: center;
+}
+
+header .btns #krasas-dropdown .krasas{
+    display: flex;
+}
+
+header .btns #krasas-dropdown .krasas button{
+    display: inline-block;
+    font-size: 2.3rem;
+    background: none;
+    border-radius: var(--border-radius);
+    margin: 0 .2rem;
+    line-height: 3.5rem;
+    width: 3.5rem;
+}
+
+header .btns #krasas-dropdown .krasas button:hover{
+    background: var(--transparent);
+}
+
+header .btns #krasas-dropdown .krasas #balts{
+    color: #e6e6e6;
+}
+
+header .btns #krasas-dropdown .krasas #melns{
+    color: #111;
+}
+
+header .btns #krasas-dropdown .krasas #dzeltens{
+    color: #fcde67;
+}
+
+header .btns #krasas-dropdown .krasas #zils{
+    color: #2F2FA2;
+}
+
+.saturs{
+    margin-top: 8rem;
+    padding: var(--section-padding);
+}
+
+.saturs ::placeholder{
+    color: var(--grey);
+}
+
+.saturs h1{
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--black);
+}
+
+.saturs .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.saturs .box-container .box{
+    display: block;
+    flex: 1 1 22.8rem;
+    border-top: 3px solid var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+    border-radius: var(--border-radius);
+    padding: .5rem 2rem;
+    margin: .5rem .5rem;
+    width: 22%;
+    text-align: center;
+}
+
+.saturs .box-container .box h2{
+    font-size: 1.3rem;
+    display: block;
+    color: var(--black);
+}
+
+.saturs .box-container .box h2 label{
+    color: var(--main-color);
+}
+
+.saturs table{
+    margin-top: 1.5rem;
+    box-shadow: 0rem 0rem .5rem var(--grey);
+    color: var(--black);
+    width: 100%;
+}
+
+.saturs table tr th{
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: .3rem 1rem;
+    cursor: default;
+}
+
+.saturs table tr td{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: .5rem;
+    border-top: 1px solid rgba(153, 153, 153, 0.4);
+    border-bottom: 1px solid rgba(153, 153, 153, 0.4);
+}
+
+.saturs table tr td .btn.small{
+    padding: 0;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    width: 2.5rem;
+    background: var(--bg);
+}
+
+.saturs table tr td .btn.small:hover{
+    background: #999;
+}
+
+.saturs table tr td .filtri{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.saturs table tr td .filtri .btn{
+    background: var(--bg);
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    height: min-content;
+    padding: .5rem;
+    margin: .5rem 0;
+    border: var(--border);
+}
+
+.saturs table tr td .filtri .btn:hover{
+    background: var(--main-color);
+}
+
+.saturs table tr td .filtri .meklesana{
+    font-size: 1.3rem;
+}
+
+.saturs table tr td .filtri .meklesana input{
+    font-size: 1.3rem;
+    margin-left: .5rem;
+    padding: .5rem;
+    border-radius: var(--border-radius);
+    width: 12rem;
+    background: var(--white);
+    color: var(--black);
+}
+
+.saturs table tr td .filtri .meklesana input:hover, .saturs table tr td .filtri .meklesana input:focus{
+    background: var(--main-color);
+    color: var(--bg);
+}
+
+.saturs table tr td .filtri .meklesana .btn{
+    width: fit-content;
+    background: var(--bg);
+    color: var(--main-color);
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    padding: .5rem;
+    margin: .5rem 0;
+    border: var(--border);
+}
+
+.saturs table tr td .filtri .kartosana{
+    font-size: 1.3rem;
+    padding-left: 1.5rem;
+}
+
+.saturs table tr td .filtri .kartosana select{
+    font-size: 1.3rem;
+    margin-right: .5rem;
+    padding: .5rem;
+    border-radius: var(--border-radius);
+    background: var(--white);
+    color: var(--black);
+}
+
+.saturs table tr td .filtri .kartosana select:hover, .saturs table tr td .filtri .kartosana select:focus{
+    background: var(--main-color);
+    color: var(--bg);
+}
+
+.saturs table tr td .filtri .kartosana select option{
+    background: var(--bg);
+    color:  var(--black);
+}
+
+.saturs .dati{
+    width: auto;
+    margin: 0 10%;
+}
+
+.saturs .dati table .row td .box{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    margin: .5rem 0;
+    background: var(--white);
+    color: var(--black);
+}
+
+.saturs .dati table .row td .box:focus{
+    box-shadow: 0px 0px 4px 4px var(--main-color);
+}
+
+.saturs .dati table .row td .box.set{
+    background-color: var(--main-color);
+    color: var(--bg);
+}
+
+.saturs .dati table .row td .btn{
+    width: auto;
+    line-height: normal;
+    padding: .3rem 1.5rem;
+    color: var(--main-color);
+    background: var(--bg);
+    font-size: 1.5rem;
+    margin: .5rem 0;
+    border: var(--border);
+}
+
+.saturs .dati table .row td .btn:hover{
+    background: var(--main-color);
+    color: var(--bg);
+}
+
+.saturs .dati table .row td textarea{
+    height: 20rem;
+    resize: vertical;
+}
+
+.saturs .temati .box{
+    width: 25rem;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    margin: .5rem 0;
+    background: var(--white);
+    color: var(--black);
+}
+
+.saturs .temati .box:focus{
+    box-shadow: 0px 0px 4px 4px var(--main-color);
+}
+
+.saturs .temati .btn{
+    margin-left: 1.5rem;
+    border: var(--border);
+}
+
+.saturs .temati .btn:hover{
+    background: var(--main-color);
+    color: var(--bg);
+}
+
+.zina{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.zina.zals{
+    color: #595;
+}
+
+.zina.sarkans{
+    color: #933;
+}
+
+.saturs .zinojums{
+    width: auto;
+    display: block;
+    margin: 10% 25%;
+    padding: 6rem 3rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color:  var(--black);
+    text-align: center;
+    border-radius: 2rem;
+}
+
+.saturs .zinojums a{
+    color: var(--bg);
+    text-decoration: underline;
+}
+
+.saturs .zinojums .fas{
+    font-size: 4rem;
+    margin-left: 7rem;
+    color: #141;
+    opacity: 0;
+    position: relative;
+    animation: 1.5s alternate simbols;
+}
+
+.saturs .zinojums .fas.fa-times{
+    color: #411;
+}
+
+.saturs .zinojums.zals{
+    background: #595;
+}
+
+.saturs .zinojums.sarkans{
+    background: #933;
+}
+
+.saturs .zinojums.zals .fas{
+    animation: 1s 1 forwards simbols;
+}
+
+.saturs .zinojums.sarkans .fas{
+    animation: 1s 1 forwards simbols;
+}
+
+@keyframes simbols{
+    from {opacity: 0; margin-left: 7rem;}
+    to {opacity: 1; margin-left: 1rem;}
+}
+
+footer{
+    background: var(--main-color);
+    width: 100%;
+    padding: var(--section-padding);
+}
+
+footer h1{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--bg);
+}
+
+footer h1:hover{
+    color: var(--black);
+    cursor: default;
+}
+
+@media (max-width:1600px){
+    :root{
+        --section-padding: 2rem 7%;
+    }
+    
+    header h1 a{
+        font-size: 1.8rem;
+    }
+
+    header nav ul li a{
+        padding: .5rem .8rem;
+        font-size: 1.25rem;
+    }
+
+    .saturs h1{
+        font-size: 1.8rem;
+    }
+
+    .saturs table tr th{
+        font-size: 1.2rem;
+        padding: .2rem .8rem;
+    }
+
+    .saturs table tr td{
+        font-size: 1rem;
+        padding: .4rem;
+    }
+
+    .saturs .zinojums{
+        margin: 10% 25%;
+        padding: 6rem 3rem;
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width:1350px){
+    :root{
+        --section-padding: 2rem 6%;
+    }
+
+    header nav ul li a{
+        padding: .5rem .6rem;
+        font-size: 1.2rem;
+    }
+}
